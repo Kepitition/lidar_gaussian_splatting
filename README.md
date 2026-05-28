@@ -249,21 +249,7 @@ lidar_gaussian_splatting/
     iphone_import.py          ← Record3D → training format
     gs_train.py               ← Gaussian Splatting training loop
     gs_viewer.py              ← web-based 3D viewer
-    colmap_pipeline.py        ← (optional) COLMAP SfM for non-LiDAR photos
-    colmap_to_gs.py           ← COLMAP output → GS format
 ```
-
----
-
-## COLMAP workflow (regular photos, no LiDAR)
-
-The pipeline also supports standard photo sets via COLMAP:
-
-```bash
-python main.py --images data/my_photos --output output/my_scene --quality high
-```
-
-Requires COLMAP installed: [colmap.github.io](https://colmap.github.io/install.html)
 
 ---
 
