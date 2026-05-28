@@ -1,0 +1,42 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Output data (large files)
+output/
+*.ply
+*.db
+
+# COLMAP workspace
+database.db
+sparse/
+dense/
+
+# iPhone / Record3D raw exports (large video + depth data)
+R3_exports/
+*.exr
+*.r3d
+
+# Viewer / runtime state
+imgui.ini
+COMMANDS.txt
+NUL
+
+# OS
+.DS_Store
+Thumbs.db

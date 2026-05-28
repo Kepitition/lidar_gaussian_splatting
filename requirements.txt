@@ -1,0 +1,24 @@
+# iPhone → Gaussian Splatting 3D Scanning Pipeline
+# =================================================
+
+# Core
+numpy>=1.24.0
+scipy>=1.10.0
+opencv-python>=4.8.0
+Pillow>=10.0.0
+
+# Web-based interactive viewer (orbit + free-flight, no OpenGL drivers needed)
+viser>=0.2.0
+
+# PyTorch (CUDA required for gsplat)
+# Install separately:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Gaussian Splatting
+gsplat>=1.0.0
+
+# Utilities
+tqdm>=4.65.0
+coloredlogs>=15.0
