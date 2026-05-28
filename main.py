@@ -36,8 +36,6 @@ PROJECT_ROOT = Path(__file__).parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from config import PipelineConfig, QualityPreset
-from scripts.colmap_pipeline import ColmapPipeline
-from scripts.colmap_to_gs import convert_colmap_to_gs
 from scripts.gs_train import train as gs_train
 
 
@@ -218,6 +216,13 @@ def main():
 
     # ── Stage 1: COLMAP SfM ──────────────────────────────────────────
     if not args.skip_colmap:
+        try:
+            from scripts.colmap_pipeline import ColmapPipeline
+            from scripts.colmap_to_gs import convert_colmap_to_gs
+        except ImportError:
+            logger.error("COLMAP scripts not found. Use --scan for iPhone workflow.")
+            sys.exit(1)
+
         logger.info("=" * 60)
         logger.info("STAGE 1: COLMAP Structure-from-Motion")
         logger.info("=" * 60)

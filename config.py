@@ -55,9 +55,9 @@ class GaussianSplattingConfig:
     # Threshold for clone/split: 0.0001 is calibrated for sparse COLMAP init.
     # LiDAR init already places Gaussians near optimal positions → smaller gradients
     # → lower threshold needed to trigger densification.
-    densify_grad_threshold: float = 0.000008
+    densify_grad_threshold: float = 0.000001
     densification_interval: int = 100
-    opacity_reset_interval: int = 3000
+    opacity_reset_interval: int = 5000
     prune_opacity_threshold: float = 0.005
     max_gaussians: int = 800_000
 
